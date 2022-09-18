@@ -1,0 +1,46 @@
+.projects__container {
+  @extend .container;
+}
+.filter--projects {
+  margin-bottom: 50px;
+}
+
+.projects {
+  padding: 94px 0;
+}
+/* Main Projects hide title */
+.projects__title {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+
+  border: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* Main Projects elements positioning */
+
+.projects__list {
+  @extend .list;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Set width of one card so that there were space for 3 cards in raw */
+.projects__item {
+  width: calc((100% - 60px) / 3);
+
+  margin-right: 30px;
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+
+  margin-bottom: 30px;
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+}

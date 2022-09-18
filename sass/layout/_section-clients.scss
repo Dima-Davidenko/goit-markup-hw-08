@@ -1,0 +1,37 @@
+// Our clients section
+.clients {
+  padding: 94px 0;
+}
+.clients__container {
+  @extend .container;
+}
+.clients__title {
+  @extend .section-title;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+// List client's Logos. From SVG sprite
+.clients__list {
+  @extend .list;
+  display: flex;
+  justify-content: space-between;
+}
+.clients__link {
+  @extend .link;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+
+  color: $icon-main-clr;
+
+  border: 1px solid $icon-main-clr;
+  border-radius: 4px;
+  @include hov-foc-effect-color;
+  @include hov-foc-effect-border;
+}
+
+.clients__icon {
+  fill: currentColor;
+}

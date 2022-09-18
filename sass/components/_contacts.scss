@@ -1,0 +1,21 @@
+// Contacts (adress, e-mail, phone). Vertical list.
+.contacts {
+  @extend .list;
+}
+.contacts__item {
+  margin-bottom: 9px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+// Link on e-mail and phone number
+.contacts__link {
+  @extend .link;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+  @include hov-foc-effect-color;
+}
+// Link on Google maps
+.contacts__link--gmaps {
+  color: $sec-text-clr;
+}

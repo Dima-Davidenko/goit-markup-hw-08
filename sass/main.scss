@@ -1,0 +1,71 @@
+// Project variables
+@import 'utils/variables';
+
+// Makes element invisible utilite
+@import 'utils/make-invisible';
+
+// 3 mixins that make changing color, background-color and border whith animation for hover and focus effects
+@import 'utils/hov-foc-effect';
+
+// Base font styles, reset for lists and links
+@import 'base/base';
+
+// Main container for section's content
+@import 'base/container';
+
+// Main Studio Logo
+@import 'components/logo';
+
+// Button (active and passive states)
+@import 'components/button';
+
+// List of links on social networks
+@import 'components/social-net-list';
+
+// Card of team's member
+@import 'components/personal-card';
+
+// Backdrop
+@import 'components/backdrop';
+
+// modal window and backdrop
+@import 'components/modal-window';
+
+// Filter on portfolio page
+@import 'components/filter';
+
+// Contacts (adress, e-mail, phone). Vertical list.
+@import 'components/contacts';
+
+// Card-link with image, overlay, title and description
+@import 'components/card-link-ovrl-img-descr';
+
+// Subscribe form
+@import 'components/subscribe-form';
+
+// General layouts for sections
+@import 'layout/general-section';
+
+// Layout for Header
+@import 'layout/header';
+
+// Layout for Footer
+@import 'layout/footer';
+
+// Layout for section Hero
+@import 'layout/section-hero';
+
+// Layout for section Features
+@import 'layout/section-features';
+
+// Layout for section Work examples
+@import 'layout/section-work_examples';
+
+// Layout for section Team
+@import 'layout/section-team';
+
+// Layout for section Clients
+@import 'layout/section-clients';
+
+// Layout for section Projects in Portfolio page
+@import 'layout/section-projects';

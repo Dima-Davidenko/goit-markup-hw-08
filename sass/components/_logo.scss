@@ -1,0 +1,25 @@
+// General Logo styles
+$logo-accent-color: $primary-accent-clr;
+$logo-color: #000000;
+.logo {
+  display: inline-block;
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+  color: $logo-color;
+  &:focus {
+    outline: 1px solid $primary-accent-clr;
+  }
+}
+.logo__accent {
+  color: $logo-accent-color;
+}
+
+//Example of markup for this Logo
+// <a class="logo site-nav__logo" href="./index.html">
+//    <span class="logo__accent">Web</span>
+//    Studio
+// </a>
