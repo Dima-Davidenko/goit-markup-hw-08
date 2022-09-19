@@ -19,6 +19,9 @@
 // Button (active and passive states)
 @import 'components/button';
 
+// Mobile menu (only 0-767px)
+@import 'components/mobile-menu';
+
 // List of links on social networks
 @import 'components/social-net-list';
 
@@ -42,9 +45,6 @@
 
 // Subscribe form
 @import 'components/subscribe-form';
-
-// General layouts for sections
-@import 'layout/general-section';
 
 // Layout for Header
 @import 'layout/header';

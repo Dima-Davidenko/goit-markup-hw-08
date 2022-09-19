@@ -32,6 +32,8 @@
 }
 // Aligns input and button in line
 .subscribe-form__wrapper {
-  display: flex;
-  align-items: start;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: start;
+  }
 }

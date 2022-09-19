@@ -6,6 +6,9 @@
   margin: 16px auto 0;
   justify-content: space-between;
 }
+.social-net-list--footer {
+  display: inline-flex;
+}
 .social-net-list__link {
   @extend .link;
   display: block;

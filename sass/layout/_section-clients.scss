@@ -1,28 +1,56 @@
 // Our clients section
 .clients {
-  padding: 94px 0;
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 .clients__container {
   @extend .container;
 }
 .clients__title {
-  @extend .section-title;
+  font-weight: 700;
+  text-align: center;
+  color: $title-text-clr;
   margin-top: 0;
-  margin-bottom: 50px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.18;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 // List client's Logos. From SVG sprite
 .clients__list {
   @extend .list;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  margin: -15px;
 }
 .clients__link {
   @extend .link;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 92px;
+  margin: 15px;
+
+  @media screen and (max-width: 767px) {
+    width: 200px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 226px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 170px;
+  }
 
   color: $icon-main-clr;
 

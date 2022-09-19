@@ -1,8 +1,4 @@
 // Card with img (photo), shadows, title (name), description (profession). Width is defined by img width.
-$personal-card_font-weight: $prime-fnt-weight;
-$personal-card_font-size: $primary-fnt-size;
-$personal-card_text-clr: $title-text-clr;
-$personal-card_fnt-size: $primary-fnt-size;
 // Card shadows, border and background
 .personal-card {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -19,18 +15,18 @@ $personal-card_fnt-size: $primary-fnt-size;
 .personal-card__name {
   margin: 0;
 
-  font-weight: $personal-card_font-weight;
-  font-size: $personal-card_font-size;
+  font-weight: $prime-fnt-weight;
+  font-size: $primary-fnt-size;
   line-height: 1.19;
   text-align: center;
-  color: $personal-card_text-clr;
+  color: $title-text-clr;
 }
 /* Card Description */
 .personal-card__profession {
   margin-top: 10px;
   margin-bottom: 0;
 
-  font-size: $personal-card_fnt-size;
+  font-size: $primary-fnt-size;
   line-height: 1.19;
   text-align: center;
 }
