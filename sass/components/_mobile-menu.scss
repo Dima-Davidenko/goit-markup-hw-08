@@ -16,9 +16,11 @@
     left: 0;
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
+    max-width: 480px;
+    height: 95vh;
     max-height: 796px;
+    min-height: 500px;
     z-index: 2;
     padding: 48px 40px;
     background-color: $primary-bkg-clr;
@@ -69,7 +71,7 @@
   }
 
   // Navigation links (Studio, Porfolio, Contacts)
-  .site-nav__item:not(:last-child) {
+  .site-nav__item {
     margin-bottom: 32px;
   }
   .site-nav__link {
@@ -92,14 +94,14 @@
   .contact-list__item {
     font-weight: 500;
     font-size: 24px;
-    line-height: 28px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     color: $primary-text-clr;
 
     &--phone {
       margin-bottom: 32px;
       font-size: 34px;
-      line-height: 40px;
+      line-height: 1.18;
       color: $primary-accent-clr;
     }
   }
@@ -118,7 +120,6 @@
     display: flex;
   }
   .mobile-menu__soc-net-item {
-    padding: 0 10px;
     font-weight: 500;
     font-size: 18px;
     line-height: 1.22;
@@ -127,9 +128,39 @@
     color: $primary-accent-clr;
 
     &:not(:last-child) {
+      padding-right: 10px;
       border-right-width: 1px;
       border-right-style: solid;
       border-right-color: rgba(33, 33, 33, 0.2);
     }
+    &:not(:first-child) {
+      padding-left: 10px;
+    }
+  }
+}
+// Change fonts sizes, padding on relative for modern devices, where viewport widt is more narrow than 480px
+@media screen and (max-width: 479px) {
+  .mobile-menu {
+    // 95vh because some mobile brosers may include bottom android nav panel in viewport height
+    // height: 95vh;
+    padding: 9vw;
+  }
+  .site-nav__item:not(:last-child) {
+    margin-bottom: 8vw;
+  }
+  .site-nav__link {
+    font-size: 8vw;
+  }
+  .contact-list__item {
+    font-size: 5vw;
+    &--phone {
+      font-size: 7vw;
+    }
+  }
+  .mobile-menu__soc-net-list {
+    justify-content: center;
+  }
+  .mobile-menu__soc-net-item {
+    font-size: 4vw;
   }
 }

@@ -1,18 +1,36 @@
-// Card with img (photo), shadows, title (name), description (profession). Width is defined by img width.
-// Card shadows, border and background
-.personal-card {
+.team-list {
+  @extend .list;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  }
+}
+.team-list__card {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: $primary-bkg-clr;
+  flex-basis: 100%;
+  margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    flex-basis: 354px;
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: 270px;
+  }
 }
 // Box for image description
-.personal-card__title-box {
+.team-list__title-box {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 // Title styles (name)
-.personal-card__name {
+.team-list__name {
   margin: 0;
 
   font-weight: $prime-fnt-weight;
@@ -22,7 +40,7 @@
   color: $title-text-clr;
 }
 /* Card Description */
-.personal-card__profession {
+.team-list__profession {
   margin-top: 10px;
   margin-bottom: 0;
 
@@ -30,12 +48,3 @@
   line-height: 1.19;
   text-align: center;
 }
-
-// Example of markup
-// <li class="personal-card">
-//   <img src="./images/mykola-tar.jpg" alt="Маркетолог Микола Тарасов" width="270" />
-//   <div class="personal-card__title-box">
-//     <h3 class="personal-card__name">Микола Тарасов</h3>
-//     <p class="personal-card__profession" lang="en">Marketing</p>
-//   </div>
-// </li>

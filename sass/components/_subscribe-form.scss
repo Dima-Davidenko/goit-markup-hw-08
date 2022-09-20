@@ -8,7 +8,6 @@
 }
 .subscribe-form__input {
   height: 50px;
-  width: 358px;
   padding-left: 16px;
   margin-right: 12px;
   margin-bottom: 35px;
@@ -29,10 +28,26 @@
   &:focus::placeholder {
     color: rgba(33, 150, 243, 0.5);
   }
+  @media screen and (max-width: 479px) {
+    width: 90vw;
+  }
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    display: block;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  }
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 // Aligns input and button in line
 .subscribe-form__wrapper {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     display: flex;
     align-items: start;
   }
