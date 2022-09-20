@@ -215,20 +215,29 @@
 
           <ul class="team-list">
             <li class="team-list__card">
-              <img
-                class="team-list__img"
-                srcset="
-                  ./images/team/igor-dsk-270.jpg 270w,
-                  ./images/team/igor-tab-354.jpg 354w,
-                  ./images/team/igor-mob-450.jpg 450w,
-                  ./images/team/igor-dsk-540.jpg 540w,
-                  ./images/team/igor-tab-708.jpg 708w,
-                  ./images/team/igor-mob-900.jpg 900w
-                "
-                src="./images/team/igor-mob-270.jpg"
-                alt="Дизайнер Ігор Дем'яненко"
-                sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 450px"
-              />
+              <picture>
+                <source
+                  srcset="./images/team/igor-dsk-270.jpg 270w, ./images/team/igor-dsk-540.jpg 540w"
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  srcset="./images/team/igor-tab-354.jpg 354w, ./images/team/igor-tab-708.jpg 708w"
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+                <source
+                  srcset="./images/team/igor-mob-450.jpg 450w, ./images/team/igor-mob-900.jpg 900w"
+                  media="(min-width: 480px)"
+                  sizes="450px"
+                />
+                <img
+                  class="team-list__img"
+                  src="./images/team/igor-mob-900.jpg"
+                  alt="Дизайнер Ігор Дем'яненко"
+                />
+              </picture>
+
               <div class="team-list__title-box">
                 <h3 class="team-list__name">Ігор Дем'яненко</h3>
                 <p class="team-list__profession" lang="en">Product Designer</p>
@@ -265,23 +274,32 @@
               </div>
             </li>
             <li class="team-list__card">
-              <img
-                class="team-list__img"
-                srcset="
-                  ./images/team/igor-dsk-270.jpg 270w,
-                  ./images/team/igor-tab-354.jpg 354w,
-                  ./images/team/igor-mob-450.jpg 450w,
-                  ./images/team/igor-dsk-540.jpg 540w,
-                  ./images/team/igor-tab-708.jpg 708w,
-                  ./images/team/igor-mob-900.jpg 900w
-                "
-                src="./images/team/igor-mob-270.jpg"
-                alt="Дизайнер Ігор Дем'яненко"
-                sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
-              />
+              <picture>
+                <source
+                  srcset="./images/team/olga-dsk-270.jpg 270w, ./images/team/olga-dsk-540.jpg 540w"
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  srcset="./images/team/olga-tab-354.jpg 354w, ./images/team/olga-tab-708.jpg 708w"
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+                <source
+                  srcset="./images/team/olga-mob-450.jpg 450w, ./images/team/olga-mob-900.jpg 900w"
+                  media="(min-width: 480px)"
+                  sizes="450px"
+                />
+                <img
+                  class="team-list__img"
+                  src="./images/team/olga-mob-900.jpg"
+                  alt="Ольга Рєпіна"
+                />
+              </picture>
+
               <div class="team-list__title-box">
-                <h3 class="team-list__name">Ігор Дем'яненко</h3>
-                <p class="team-list__profession" lang="en">Product Designer</p>
+                <h3 class="team-list__name">Ольга Рєпіна</h3>
+                <p class="team-list__profession" lang="en">Frontend Developer</p>
                 <ul class="social-net-list">
                   <li>
                     <a class="social-net-list__link" href="https://www.instagram.com/">
@@ -315,23 +333,41 @@
               </div>
             </li>
             <li class="team-list__card">
-              <img
-                class="team-list__img"
-                srcset="
-                  ./images/team/igor-dsk-270.jpg 270w,
-                  ./images/team/igor-tab-354.jpg 354w,
-                  ./images/team/igor-mob-450.jpg 450w,
-                  ./images/team/igor-dsk-540.jpg 540w,
-                  ./images/team/igor-tab-708.jpg 708w,
-                  ./images/team/igor-mob-900.jpg 900w
-                "
-                src="./images/team/igor-mob-270.jpg"
-                alt="Дизайнер Ігор Дем'яненко"
-                sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/mykola-dsk-270.jpg 270w,
+                    ./images/team/mykola-dsk-540.jpg 540w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  srcset="
+                    ./images/team/mykola-tab-354.jpg 354w,
+                    ./images/team/mykola-tab-708.jpg 708w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+                <source
+                  srcset="
+                    ./images/team/mykola-mob-450.jpg 450w,
+                    ./images/team/mykola-mob-900.jpg 900w
+                  "
+                  media="(min-width: 480px)"
+                  sizes="450px"
+                />
+                <img
+                  class="team-list__img"
+                  src="./images/team/mykola-mob-900.jpg"
+                  alt="Микола Тарасов"
+                />
+              </picture>
+
               <div class="team-list__title-box">
-                <h3 class="team-list__name">Ігор Дем'яненко</h3>
-                <p class="team-list__profession" lang="en">Product Designer</p>
+                <h3 class="team-list__name">Микола Тарасов</h3>
+                <p class="team-list__profession" lang="en">Marketing</p>
                 <ul class="social-net-list">
                   <li>
                     <a class="social-net-list__link" href="https://www.instagram.com/">
@@ -365,23 +401,42 @@
               </div>
             </li>
             <li class="team-list__card">
-              <img
-                class="team-list__img"
-                srcset="
-                  ./images/team/igor-dsk-270.jpg 270w,
-                  ./images/team/igor-tab-354.jpg 354w,
-                  ./images/team/igor-mob-450.jpg 450w,
-                  ./images/team/igor-dsk-540.jpg 540w,
-                  ./images/team/igor-tab-708.jpg 708w,
-                  ./images/team/igor-mob-900.jpg 900w
-                "
-                src="./images/team/igor-mob-270.jpg"
-                alt="Дизайнер Ігор Дем'яненко"
-                sizes="(min-width: 768px) 354px, (min-width: 1200px) 270px, 100vw"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/myhajlo-dsk-270.jpg 270w,
+                    ./images/team/myhajlo-dsk-540.jpg 540w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="270px"
+                />
+                <source
+                  srcset="
+                    ./images/team/myhajlo-tab-354.jpg 354w,
+                    ./images/team/myhajlo-tab-708.jpg 708w
+                  "
+                  media="(min-width: 768px)"
+                  sizes="354px"
+                />
+                <source
+                  srcset="
+                    ./images/team/myhajlo-mob-450.jpg 450w,
+                    ./images/team/myhajlo-mob-900.jpg 900w
+                  "
+                  media="(min-width: 480px)"
+                  sizes="450px"
+                />
+
+                <img
+                  class="team-list__img"
+                  src="./images/team/myhajlo-mob-900.jpg"
+                  alt="Михайло Єрмаков"
+                />
+              </picture>
+
               <div class="team-list__title-box">
-                <h3 class="team-list__name">Ігор Дем'яненко</h3>
-                <p class="team-list__profession" lang="en">Product Designer</p>
+                <h3 class="team-list__name">Михайло Єрмаков</h3>
+                <p class="team-list__profession" lang="en">UI Designer</p>
                 <ul class="social-net-list">
                   <li>
                     <a class="social-net-list__link" href="https://www.instagram.com/">

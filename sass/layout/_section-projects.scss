@@ -2,11 +2,20 @@
   @extend .container;
 }
 .filter--projects {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .projects {
-  padding: 94px 0;
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+  }
 }
 /* Main Projects hide title */
 .projects__title {
@@ -27,12 +36,14 @@
 
 .projects__list {
   @extend .list;
-  display: flex;
-  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 /* Set width of one card so that there were space for 3 cards in raw */
 .projects__item {
-  width: calc((100% - 60px) / 3);
+  width: 100%;
 
   margin-right: 30px;
   &:nth-child(3n) {

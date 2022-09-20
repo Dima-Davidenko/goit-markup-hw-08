@@ -35,7 +35,9 @@
               </li>
 
               <li class="site-nav__item">
-                <a class="site-nav__link site-nav__link--current" href="./portfolio.html">Портфоліо</a>
+                <a class="site-nav__link site-nav__link--current" href="./portfolio.html"
+                  >Портфоліо</a
+                >
               </li>
 
               <li class="site-nav__item">
@@ -130,12 +132,37 @@
             <li class="projects__item">
               <a class="card-link" href="">
                 <div class="card-link__wrap-overlay">
-                  <img
-                    class="card-link__img"
-                    src="./images/pfl11.jpg"
-                    alt="Приклад роботи студії під назвою Технокряк"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/projects/pfl1-desk-370.jpg 370w,
+                        ./images/projects/pfl1-desk-740.jpg 540w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="370px"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/pfl1-tab-354.jpg 354w,
+                        ./images/projects/pfl1-tab-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      sizes="354px"
+                    />
+                    <source
+                      srcset="
+                        ./images/projects/pfl1-mob-450.jpg 450w,
+                        ./images/projects/pfl1-mob-900.jpg 900w
+                      "
+                      media="(min-width: 480px)"
+                      sizes="450px"
+                    />
+                    <img
+                      class="team-list__img"
+                      src="./images/projects/pfl1-mob-900.jpg"
+                      alt="Приклад роботи студії під назвою Технокряк"
+                    />
+                  </picture>
                   <p class="card-link__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -407,20 +434,24 @@
             <label class="subscribe-form__label">
               <h4 class="subscribe-form__title">Підпишіться на розсилку</h4>
               <div class="subscribe-form__wrapper">
-                <input class="subscribe-form__input" type="email" placeholder="E-mail" />
-              </label>
-              <button class="button button--active button--subscribe-form">
-                Підписатися
-                <svg class="button__icon button__icon--end" width="24" height="24">
-                  <use href="./images/icons.svg#icon-send"></use>
-                </svg>
-              </button>
+                <input
+                  class="subscribe-form__input"
+                  type="email"
+                  placeholder="E-mail"
+                  name="email"
+                />
+                <button class="button button--active button--subscribe-form" type="submit">
+                  Підписатися
+                  <svg class="button__icon button__icon--end" width="24" height="24">
+                    <use href="./images/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
               </div>
+            </label>
           </form>
         </div>
       </div>
     </footer>
     <script src="./js/mobile-menu.js"></script>
-
   </body>
 </html>

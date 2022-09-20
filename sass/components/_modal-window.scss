@@ -1,12 +1,17 @@
 // Modal window, centered x y in the middle of parent container
 .user-data-modal-window {
+  width: 100%;
   position: relative;
-  max-width: 528px;
+  max-width: 450px;
   min-height: 581px;
   margin: auto;
   padding: 40px;
   border-radius: 4px;
   background-color: $primary-bkg-clr;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+  }
 }
 // Button close, top right corner, styles reseted, use svg icon. Hover, focus effect
 .user-data-modal-window__btn-close {
@@ -118,6 +123,13 @@
 .user-data-modal-window__agreement-label {
   position: relative;
   padding-left: 23px;
+  font-size: 12px;
+  @media screen and (max-width: 479px) {
+    font-size: 2vw;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 .user-data-modal-window__license-agreement-link {
   margin-left: 0.25rem;

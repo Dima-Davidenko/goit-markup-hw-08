@@ -2,7 +2,7 @@
 .card-link {
   @extend .link;
   display: block;
-  width: 370px;
+  width: 100%;
   transition: box-shadow 250ms $transform-funct;
   &:hover,
   &:focus {

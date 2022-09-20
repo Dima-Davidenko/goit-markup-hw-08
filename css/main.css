@@ -416,6 +416,7 @@ img {
 
 .backdrop {
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   display: flex;
@@ -436,13 +437,19 @@ img {
 }
 
 .user-data-modal-window {
+  width: 100%;
   position: relative;
-  max-width: 528px;
+  max-width: 450px;
   min-height: 581px;
   margin: auto;
   padding: 40px;
   border-radius: 4px;
   background-color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .user-data-modal-window {
+    max-width: 528px;
+  }
 }
 
 .user-data-modal-window__btn-close {
@@ -572,6 +579,17 @@ img {
 .user-data-modal-window__agreement-label {
   position: relative;
   padding-left: 23px;
+  font-size: 12px;
+}
+@media screen and (max-width: 479px) {
+  .user-data-modal-window__agreement-label {
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .user-data-modal-window__agreement-label {
+    font-size: 14px;
+  }
 }
 
 .user-data-modal-window__license-agreement-link {
@@ -605,7 +623,13 @@ img {
 
 .filter {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .filter {
+    justify-content: start;
+  }
 }
 
 .filter__item {
@@ -613,6 +637,14 @@ img {
 }
 .filter__item:last-child {
   margin-right: 0;
+}
+@media screen and (max-width: 767px) {
+  .filter__item:nth-child(-n+3) {
+    margin-bottom: 15px;
+  }
+  .filter__item:nth-child(3) {
+    margin-right: 13px;
+  }
 }
 
 .contacts__item {
@@ -640,7 +672,7 @@ img {
 
 .card-link {
   display: block;
-  width: 370px;
+  width: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-link:hover, .card-link:focus {
@@ -1363,11 +1395,26 @@ img {
 }
 
 .filter--projects {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .filter--projects {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter--projects {
+    margin-bottom: 50px;
+  }
 }
 
 .projects {
-  padding: 94px 0;
+  padding: 60px 0;
+}
+@media screen and (min-width: 1200px) {
+  .projects {
+    padding: 94px 0;
+  }
 }
 
 /* Main Projects hide title */
@@ -1386,14 +1433,16 @@ img {
 }
 
 /* Main Projects elements positioning */
-.projects__list {
-  display: flex;
-  flex-wrap: wrap;
+@media screen and (min-width: 768px) {
+  .projects__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 /* Set width of one card so that there were space for 3 cards in raw */
 .projects__item {
-  width: calc((100% - 60px) / 3);
+  width: 100%;
   margin-right: 30px;
   margin-bottom: 30px;
 }
