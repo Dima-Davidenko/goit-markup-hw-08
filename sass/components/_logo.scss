@@ -21,3 +21,20 @@
 .logo__accent {
   color: $primary-accent-clr;
 }
+// Header Logo
+.logo--site-nav {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 92px;
+  }
+}
+.logo--footer {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  color: $sec-text-clr;
+}

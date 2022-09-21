@@ -1,3 +1,12 @@
+.header {
+  @media screen and (max-width: 768px) {
+    position: fixed;
+    background-color: #fff;
+    width: 100vw;
+    height: 60px;
+    z-index: 5;
+  }
+}
 .header__container {
   @extend .container;
   border-bottom: 1px solid #ececec;
@@ -5,6 +14,8 @@
   @media screen and (max-width: 767px) {
     position: relative;
     overflow: visible;
+    margin-left: auto;
+    margin-right: auto;
     line-height: $mobile-header-height;
     height: $mobile-header-height;
   }
@@ -12,16 +23,18 @@
     display: flex;
   }
 }
-// Header Logo
-.logo--site-nav {
+.header__menu {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
-    align-items: center;
-    margin-right: 88px;
+    width: 100%;
+    justify-content: space-between;
   }
 }
 // Header navigation list (Studio, Portfolio, Contacts)
-.site-nav__list {
+.header__site-nav-list {
   @extend .list;
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -31,9 +44,8 @@
     display: flex;
   }
 }
-.site-nav__item {
+.header__site-nav-item {
   @media screen and (min-width: 768px) {
-    display: flex;
     margin-right: 52px;
 
     &:last-child {
@@ -41,12 +53,10 @@
     }
   }
 }
-.site-nav__link {
+.header__site-nav-link {
   @extend .link;
   @media screen and (min-width: 768px) {
-    display: block;
     padding: 32px 0 31px;
-    font-size: 14px;
     font-weight: $prime-fnt-weight;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -54,7 +64,7 @@
     @include hov-foc-effect-color;
 
     // Change color of current link and decoration bar in the bottom
-    &.site-nav__link--current {
+    &.header__site-nav-link--current {
       position: relative;
       color: $primary-accent-clr;
 
@@ -75,11 +85,11 @@
   }
 }
 // Header Contacts list (E-mail, phone number)
-.contact-list {
+.header__contact-list {
   @extend .list;
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: center;
   }
 
@@ -87,19 +97,15 @@
     display: flex;
     margin-left: auto;
   }
-
-  @media screen and (min-width: 1200px) {
-    flex-direction: row-reverse;
-  }
 }
-.contact-list__item {
+.header__contact-list-item {
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
-    &:last-child {
+    &:first-child {
       margin-bottom: 10px;
     }
   }
@@ -110,7 +116,7 @@
     }
   }
 }
-.contact-list__link {
+.header__contact-list-link {
   @extend .link;
   @media screen and (min-width: 768px) {
     display: flex;
@@ -132,7 +138,7 @@
     }
   }
 }
-.contact-list__icon {
+.header__contact-list-icon {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     margin-right: 8px;
   }
@@ -146,7 +152,7 @@
     margin-right: 10px;
   }
 }
-.contact-list__icon--phone {
+.header__contact-list-icon--phone {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 10px;
     height: 14px;
@@ -156,7 +162,7 @@
     height: 16px;
   }
 }
-.contact-list__icon--envelope {
+.header__contact-list-icon--envelope {
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     width: 14px;
     height: 10px;

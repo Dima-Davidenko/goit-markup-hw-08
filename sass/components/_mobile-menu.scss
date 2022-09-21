@@ -1,6 +1,7 @@
 .mobile-menu {
-  display: flex;
-  width: 100%;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .mobile-menu__btn {
   display: none;
@@ -21,7 +22,7 @@
     height: 95vh;
     max-height: 796px;
     min-height: 500px;
-    z-index: 2;
+    z-index: 10;
     padding: 48px 40px;
     background-color: $primary-bkg-clr;
     transform: translateX(-100%);
@@ -40,7 +41,7 @@
   .mobile-menu__btn {
     display: block;
     position: absolute;
-    z-index: 3;
+    z-index: 20;
     top: 10px;
     right: 15px;
     width: 40px;
@@ -71,27 +72,27 @@
   }
 
   // Navigation links (Studio, Porfolio, Contacts)
-  .site-nav__item {
+  .mobile-menu__site-nav-item {
     margin-bottom: 32px;
   }
-  .site-nav__link {
+  .mobile-menu__site-nav-link {
     font-weight: $prime-fnt-weight;
     font-size: 40px;
     line-height: 1.175;
     letter-spacing: 0.02em;
     color: $title-text-clr;
   }
-  .site-nav__link--current {
+  .mobile-menu__site-nav-link--current {
     color: $primary-accent-clr;
   }
 
   // Contacts list (Phone number, E-mail)
 
-  .contact-list {
+  .mobile-menu__contact-list {
     margin-top: auto;
     margin-bottom: 64px;
   }
-  .contact-list__item {
+  .mobile-menu__contact-list-item {
     font-weight: 500;
     font-size: 24px;
     line-height: 1.17;
@@ -105,13 +106,13 @@
       color: $primary-accent-clr;
     }
   }
-  .contact-list__icon--phone {
+  .mobile-menu__contact-list-icon--phone {
     display: none;
   }
-  .contact-list__icon--envelope {
+  .mobile-menu__contact-list-icon--envelope {
     display: none;
   }
-  .contact-list__link {
+  .mobile-menu__contact-list-link {
     white-space: nowrap;
   }
 
@@ -145,13 +146,13 @@
     // height: 95vh;
     padding: 9vw;
   }
-  .site-nav__item:not(:last-child) {
+  .mobile-menu__site-nav-item:not(:last-child) {
     margin-bottom: 8vw;
   }
-  .site-nav__link {
+  .mobile-menu__site-nav-link {
     font-size: 8vw;
   }
-  .contact-list__item {
+  .mobile-menu__contact-list-item {
     font-size: 5vw;
     &--phone {
       font-size: 7vw;

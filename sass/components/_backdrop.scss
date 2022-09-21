@@ -14,7 +14,7 @@
   transition: opacity 1000ms $transform-funct, transform 1000ms $transform-funct;
 }
 // Hides via scaling to 0 to right bottom corner
-.is-hidden {
+.backdrop__is-hidden {
   transform-origin: bottom right;
   transform: scale(0);
   opacity: 0;
