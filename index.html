@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body class="page">
     <!-- Site header -->
@@ -226,30 +226,61 @@
           <h2 class="work-examples__title">Чим ми займаємося</h2>
           <ul class="work-examples__work-list">
             <li class="work-examples__item">
-              <img
-                class="work-examples__img"
-                src="./images/work-1.jpg"
-                alt="Людина працює за комп'ютером"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work/work1-dsk-370.jpg 370w,
+                    ./images/work/work1-dsk-740.jpg 740w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="370px"
+                />
+                <img
+                  class="work-examples__img"
+                  src="./images/work/work1-dsk-370.jpg"
+                  alt="Людина працює за комп'ютером"
+                  width="370"
+                />
+              </picture>
+
               <p class="work-examples__description">Десктопні додатки</p>
             </li>
             <li class="work-examples__item">
-              <img
-                class="work-examples__img"
-                src="./images/work-2.jpg"
-                alt="Людина працює за комп'ютером"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work/work2-dsk-370.jpg 370w,
+                    ./images/work/work2-dsk-740.jpg 740w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="370px"
+                />
+                <img
+                  class="work-examples__img"
+                  src="./images/work/work2-dsk-370.jpg"
+                  alt="Людина працює за комп'ютером"
+                  width="370"
+                />
+              </picture>
               <p class="work-examples__description">Мобільні додатки</p>
             </li>
             <li class="work-examples__item">
-              <img
-                class="work-examples__img"
-                src="./images/work-3.jpg"
-                alt="Людина працює за комп'ютером"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/work/work3-dsk-370.jpg 370w,
+                    ./images/work/work3-dsk-740.jpg 740w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="370px"
+                />
+                <img
+                  class="work-examples__img"
+                  src="./images/work/work3-dsk-370.jpg"
+                  alt="Людина працює за комп'ютером"
+                  width="370"
+                />
+              </picture>
               <p class="work-examples__description">Дизайнерські рішення</p>
             </li>
           </ul>
