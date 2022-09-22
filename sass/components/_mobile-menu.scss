@@ -12,6 +12,7 @@
 // Mobile styles 0-767px
 @media screen and (max-width: 767px) {
   .mobile-menu {
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
@@ -83,6 +84,7 @@
     color: $title-text-clr;
   }
   .mobile-menu__site-nav-link--current {
+    padding-left: 8px;
     color: $primary-accent-clr;
   }
 

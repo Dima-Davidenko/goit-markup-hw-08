@@ -41,7 +41,7 @@ ul {
 }
 
 a {
-  display: inline-block;
+  display: block;
   font-style: normal;
   text-decoration: none;
   color: inherit;
@@ -68,7 +68,6 @@ img {
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
-  outline: 1px solid rgb(249, 2, 2);
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .container, .projects__container, .clients__container, .team__container, .work-examples__container, .features__container, .hero__container, .footer__container, .header__container {
@@ -196,12 +195,12 @@ img {
   display: block;
   margin: 0 auto;
   min-height: 50px;
+  min-width: 200px;
   padding: 0px 32px;
   font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
 }
-
 @media screen and (min-width: 768px) {
   .mobile-menu {
     display: none;
@@ -218,6 +217,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .mobile-menu {
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
@@ -282,6 +282,7 @@ img {
     color: #212121;
   }
   .mobile-menu__site-nav-link--current {
+    padding-left: 8px;
     color: #2196f3;
   }
   .mobile-menu__contact-list {
@@ -360,7 +361,7 @@ img {
 }
 
 .social-net-list--inline {
-  display: inline-flex;
+  display: flex;
 }
 
 .social-net-list__link {
@@ -402,7 +403,11 @@ img {
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
   flex-basis: 100%;
-  margin-bottom: 30px;
+}
+@media screen and (max-width: 767px) {
+  .team-list__card:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .team-list__card {
@@ -418,7 +423,12 @@ img {
 
 .team-list__title-box {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .team-list__title-box {
+    padding-bottom: 30px;
+  }
 }
 
 .team-list__name {
@@ -508,7 +518,7 @@ img {
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: #212121;
 }
@@ -518,14 +528,13 @@ img {
   display: flex;
   flex-direction: column;
   margin: 0;
-  margin-bottom: 28px;
+  margin-bottom: 17px;
 }
 
 .user-data-modal-window__input-title {
   position: absolute;
-  top: 0;
+  top: -18px;
   left: 0;
-  transform: translateY(-23px);
   padding: 0;
   margin-top: 0;
   margin-bottom: 4px;
@@ -551,8 +560,8 @@ img {
 
 .user-data-modal-window__icon {
   position: absolute;
-  top: 12px;
-  left: 14px;
+  top: 10px;
+  left: 12px;
   fill: currentColor;
   color: #212121;
 }
@@ -563,7 +572,6 @@ img {
 .user-data-modal-window__comment {
   padding: 12px 16px;
   margin-top: 0;
-  margin-bottom: 20px;
   height: 120px;
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -577,8 +585,8 @@ img {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
@@ -586,8 +594,8 @@ img {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
@@ -595,8 +603,8 @@ img {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 1.14;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
@@ -622,6 +630,7 @@ img {
 }
 
 .user-data-modal-window__license-agreement-link {
+  display: inline-block;
   margin-left: 0.25rem;
   text-decoration: underline;
   color: #2196f3;
@@ -677,7 +686,12 @@ img {
 }
 
 .contacts__item {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__item {
+    margin-bottom: 9px;
+  }
 }
 .contacts__item:last-child {
   margin-bottom: 0;
@@ -828,9 +842,11 @@ img {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header {
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #fff;
     width: 100vw;
     height: 60px;
@@ -947,7 +963,7 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .header__contact-list-item:last-child {
+  .header__contact-list-item:first-child {
     margin-right: 30px;
   }
 }
@@ -958,7 +974,7 @@ img {
     align-items: center;
     font-size: 12px;
     font-weight: 500;
-    line-height: 14px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     white-space: nowrap;
     color: #757575;
@@ -969,6 +985,12 @@ img {
   }
   .header__contact-list-link:focus {
     outline: 1px solid #2196f3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__contact-list-link {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -1071,7 +1093,7 @@ img {
 }
 
 .footer__social-net-list {
-  margin: 20px 0 0 0;
+  margin: 20px auto 0;
 }
 
 @media screen and (max-width: 1199px) {
@@ -1106,6 +1128,11 @@ img {
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/hero-mob-480.jpg);
   background-size: cover;
   background-position: center;
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    margin-top: 60px;
+  }
 }
 @media screen and (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
@@ -1157,7 +1184,7 @@ img {
 }
 
 .hero__title {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 26px;
   line-height: 1.62;
@@ -1193,9 +1220,16 @@ img {
   }
 }
 
-@media screen and (max-width: 1199px) {
+.features {
+  padding-top: 60px;
+}
+@media screen and (max-width: 767px) {
   .features {
-    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .features {
     padding-bottom: 60px;
   }
 }
@@ -1266,6 +1300,11 @@ img {
   text-transform: uppercase;
   color: #212121;
 }
+@media screen and (max-width: 767px) {
+  .features__item-title {
+    text-align: center;
+  }
+}
 
 .work-examples {
   padding-top: 47px;
@@ -1335,11 +1374,18 @@ img {
 .team__title {
   text-align: center;
   color: #212121;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  margin-top: 0;
+  font-size: 28px;
+  line-height: 1.18;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1445,6 +1491,11 @@ img {
 
 .projects {
   padding: 60px 0;
+}
+@media screen and (max-width: 767px) {
+  .projects {
+    margin-top: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .projects {

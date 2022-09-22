@@ -16,9 +16,14 @@
 .team__title {
   text-align: center;
   color: $title-text-clr;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  margin-top: 0;
+  font-size: 28px;
+  line-height: 1.18;
   margin-bottom: 30px;
+  @media screen and (min-width: 1200px) {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
 }

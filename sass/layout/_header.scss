@@ -1,6 +1,8 @@
 .header {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     position: fixed;
+    top: 0;
+    left: 0;
     background-color: #fff;
     width: 100vw;
     height: 60px;
@@ -111,7 +113,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    &:last-child {
+    &:first-child {
       margin-right: 30px;
     }
   }
@@ -123,7 +125,7 @@
     align-items: center;
     font-size: 12px;
     font-weight: $prime-fnt-weight;
-    line-height: 14px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     white-space: nowrap;
     color: $primary-text-clr;
@@ -136,6 +138,10 @@
     &:focus {
       outline: 1px solid $primary-accent-clr;
     }
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 .header__contact-list-icon {
